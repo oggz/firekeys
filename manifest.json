@@ -1,0 +1,15 @@
+{"manifest_version": 2,
+ "name": "Fire Keys",
+ "version": "1.0",
+ "description": "Functional key bindings for Firefox!",
+ "permissions": ["tabs"],
+ "commands": {
+     "duplicate-tab": {
+         "suggested_key": { "default": "Ctrl+Shift+D" },
+         "description": "Duplicate the current tab."},
+     "search-tabs": {
+         "suggested_key": { "default": "Ctrl+Shift+F" },
+         "description": "Fuzzy search and navigate most recent tabs."}},
+ "background": {"scripts": ["background.js"]},
+ "content_scripts": [{"matches": ["<all_urls>"],
+                      "js": ["content.js"]}]}
